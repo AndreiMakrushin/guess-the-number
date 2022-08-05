@@ -9,8 +9,11 @@ console.log(x);
     function two() {
         const a = +prompt("Введите число");
         switch (true) {
-            case a === 0: confirm('Game ower'); 
+            case a === 0: if (confirm('Game ower')){
                 return;
+            }else{
+                two();
+            }
             case a < x: alert('Ваше число меньше загаданного, введите другое число');
                 two(); 
                 return;
